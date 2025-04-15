@@ -29,161 +29,161 @@ let cars = [
     title: "Toyota GR86",
     brand: "Toyota",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/55/2022_Toyota_GR86_Premium_in_Halo%2C_Front_Right%2C_09-27-2022.jpg",
-    descriptions: [
-      "FA24 2.4L Boxer-4 engine",
-      "6-speed manual or automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "2.4L Boxer-4 engine",
+    transmission: "6-speed manual or automatic",
+    drive: "Rear-wheel drive",
+    power: "228 hp, 184 lb-ft torque",
+    price: "$30,000",
   },
   {
     title: "Toyota GR Corolla",
     brand: "Toyota",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/a/ab/2024_Toyota_GR_Corolla_Circuit_Edition_in_Blue_Flame%2C_front_right%2C_2024-06-30.jpg",
-    descriptions: [
-      "G16E-GTS 1.6L Turbocharged I3 engine",
-      "6-speed manual or 8-speed automatic transmission",
-      "All-wheel drive",
-    ],
+    engine: "1.6L Turbocharged I3 engine",
+    transmission: "6-speed manual or automatic",
+    drive: "All-wheel drive",
+    power: "300 hp, 273 lb-ft torque",
+    price: "$38,860",
   },
   {
     title: "Toyota GR Supra",
     brand: "Toyota",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/0/06/Toyota_Supra_GR_Genf_2019_1Y7A5645.jpg",
-    descriptions: [
-      "B58 3.0L Turbocharged I6 engine",
-      "6-speed manual or 8-speed automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "3.0L Turbocharged I6 engine",
+    transmission: "6-speed manual or automatic",
+    drive: "Rear-wheel drive",
+    power: "382 hp, 368 lb-ft torque",
+    price: "$56,900"
   },
   {
     title: "Subaru WRX",
     brand: "Subaru",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/d/d0/2022_Subaru_WRX_Sport-Tech_in_World_Rally_Blue_Pearl%2C_Front_Left%2C_06-03-2022.jpg",
-    descriptions: [
-      "FA24 2.4L Turbocharged Boxer-4 engine",
-      "6-speed manual or CVT transmission",
-      "All-wheel drive",
-    ],
+    engine: "2.4L Turbocharged Boxer-4 engine",
+    transmission: "6-speed manual or CVT",
+    drive: "All-wheel drive",
+    power: "271 hp, 258 lb-ft torque",
+    price: "$32,735",
   },
   {
     title: "Subaru BRZ",
     brand: "Subaru",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/9/90/Subaru_BRZ_%28ZD8%29_Auto_Zuerich_2023_1X7A1254.jpg",
-    descriptions: [
-      "FA24 2.4L Boxer-4 engine",
-      "6-speed manual or automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "2.4L Boxer-4 engine",
+    transmission: "6-speed manual or automatic",
+    drive: "Rear-wheel drive",
+    power: "228 hp, 184 lb-ft torque",
+    price: "$31,210",
   },
   {
     title: "Mazda MX-5 Miata",
     brand: "Mazda",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/9/95/Mazda_Roadster_%28MX-5%29_by_Negawa_Bridge_%28cropped%29.jpg",
-    descriptions: [
-      "Skyactiv-G 1.5L engine",
-      "6-speed manual or automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "2.0L I4 engine",
+    transmission: "6-speed manual or automatic",
+    drive: "Rear-wheel drive",
+    power: "181 hp, 151 lb-ft torque",
+    price: "$29,530",
   },
   {
     title: "Ford Mustang",
     brand: "Ford",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Ford_Mustang_VII_Sindelfingen_2024_IMG_9164.jpg",
-    descriptions: [
-      "Coyote 5.0L V8 engine",
-      "6-speed manual or 10-speed automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "5.0L V8 engine",
+    transmission: "6-speed manual",
+    drive: "Rear-wheel drive",
+    power: "486 hp, 418 lb-ft torque",
+    price: "$42,860",
   },
   {
     title: "Honda Civic Type R",
     brand: "Honda",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/7/71/2024_Honda_Civic_Type_R%2C_front_right%2C_06-15-2024.jpg",
-    descriptions: [
-      "K20C1 2.0L Turbocharged I4 engine",
-      "6-speed manual transmission",
-      "Front-wheel drive",
-    ],
+    engine: "2.0L Turbocharged I4 engine",
+    transmission: "6-speed manual",
+    drive: "Front-wheel drive",
+    power: "315 hp, 310 lb-ft torque",
+    price: "$45,895",
   },
   {
     title: "Nissan Z",
     brand: "Nissan",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/7/75/Nissan_FAIRLADY_Z_%28Z34%29_Version_ST%2C_2022%2C_left-front.jpg",
-    descriptions: [
-      "VR30DDTT 3.0L Twin-Turbo V6 engine",
-      "6-speed manual or 9-speed automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "3.0L Twin-Turbo V6 engine",
+    transmission: "6-speed manual",
+    drive: "Rear-wheel drive",
+    power: "400 hp, 350 lb-ft torque",
+    price: "$42,970",
   },
   {
     title: "Nissan GT-R",
     brand: "Nissan",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/7/7c/2018_Nissan_GT-R_Premium_in_Super_Silver%2C_Front_Right%2C_10-11-2022.jpg",
-    descriptions: [
-      "VR38DETT 3.8L Twin-Turbo V6 engine",
-      "6-speed dual-clutch automatic transmission",
-      "All-wheel drive",
-    ],
+    engine: "3.8L Twin-Turbo V6 engine",
+    transmission: "6-speed automatic",
+    drive: "All-wheel drive",
+    power: "565 hp, 467 lb-ft torque",
+    price: "$121,090",
   },
   {
     title: "Chevrolet Corvette",
     brand: "Chevrolet",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Chevrolet_Corvette_C8_IAA_2021_1X7A0156.jpg",
-    descriptions: [
-      "LT2 6.2L V8 engine",
-      "8-speed dual-clutch automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "6.2L V8 engine",
+    transmission: "8-speed automatic",
+    drive: "Rear-wheel drive",
+    power: "490 hp, 465 lb-ft torque",
+    price: "$70,195",
   },
   {
     title: "Chevrolet Camaro",
     brand: "Chevrolet",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/5e/2019_Chevrolet_Camaro_2SS_6.2L_front_3.16.19.jpg",
-    descriptions: [
-      "LT1 6.2L V8 engine",
-      "6-speed manual or 10-speed automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "6.2L V8 engine",
+    transmission: "6-speed manual",
+    drive: "Rear-wheel drive",
+    power: "455 hp, 455 lb-ft torque",
+    price: "$40,395",
   },
   {
     title: "BMW M3",
     brand: "BMW",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/3/39/2021_BMW_M3_Competition_Automatic_3.0_Front.jpg",
-    descriptions: [
-      "S58 3.0L Twin-Turbo I6 engine",
-      "6-speed manual or 8-speed automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "S58 3.0L Twin-Turbo I6 engine",
+    transmission: "8-speed automatic",
+    drive: "Rear-wheel drive",
+    power: "473 hp, 406 lb-ft torque",
+    price: "$76,700",
   },
   {
     title: "BMW M4",
     brand: "BMW",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/e/e2/2021_BMW_M4_Competition_Automatic_3.0_Front.jpg",
-    descriptions: [
-      "S58 3.0L Twin-Turbo I6 engine",
-      "6-speed manual or 8-speed automatic transmission",
-      "Rear-wheel drive",
-    ],
+    engine: "S58 3.0L Twin-Turbo I6 engine",
+    transmission: "8-speed automatic",
+    drive: "Rear-wheel drive",
+    power: "473 hp, 406 lb-ft torque",
+    price: "$80,100",
   },
   {
     title: "Audi R8",
     brand: "Audi",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/7/7e/2016_Audi_R8_Plus_Quattro_V10_S-A_5.2.jpg",
-    descriptions: [
-      "V10 5.2L engine",
-      "7-speed dual-clutch automatic transmission",
-      "All-wheel drive",
-    ],
+    engine: "5.2L V10 engine",
+    transmission: "7-speed automatic",
+    drive: "All-wheel drive",
+    power: "602 hp, 413 lb-ft torque",
+    price: "$142,700",
   },
   {
     title: "Mercedes-Benz AMG S63 E",
     brand: "Mercedes-Benz",
     imageURL: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Mercedes-AMG_S_63_%28W223%29_IMG_8215.jpg",
-    descriptions: [
-      "M177 4.0L Twin-Turbo V8 engine",
-      "9-speed automatic transmission",
-      "All-wheel drive",
-    ],
+    engine: "4.0L Twin-Turbo V8 engine",
+    transmission: "9-speed automatic",
+    drive: "All-wheel drive",
+    power: "791 hp, 1,055 lb-ft torque",
+    price: "$186,200",
   },
 ];
 
@@ -195,14 +195,14 @@ function showCards() {
   // Loop through the cars array and create a card for each car
   // Uses the template card to create new cards
   for (let i = 0; i < cars.length; i++) {
-    let { title, imageURL, descriptions } = cars[i];
+    let { title, imageURL, price } = cars[i];
     const nextCard = templateCard.cloneNode(true);
-    editCardContent(nextCard, title, imageURL, descriptions);
+    editCardContent(nextCard, title, imageURL, price);
     cardContainer.appendChild(nextCard);
   }
 }
 
-function editCardContent(card, newTitle, newImageURL, newDescriptions) {
+function editCardContent(card, newTitle, newImageURL) {
   card.style.display = "block";
 
   const cardHeader = card.querySelector("h2");
@@ -214,12 +214,7 @@ function editCardContent(card, newTitle, newImageURL, newDescriptions) {
 
   const cardDescriptions = card.querySelector(".descriptions");
   cardDescriptions.innerHTML = ""; // Clear existing descriptions
-  newDescriptions.forEach((desc) => {
-    const descItem = document.createElement("li");
-    descItem.textContent = desc;
-    cardDescriptions.appendChild(descItem);
-  });
-
+  
   // You can use console.log to help you debug!
   // View the output by right clicking on your website,
   // select "Inspect", then click on the "Console" tab
@@ -292,4 +287,111 @@ function toggleAttributions() {
   } else {
     attributionList.style.display = "none";
   }
+}
+
+let selectedCars = []; // Array to store selected cars for comparison
+
+function selectCarForComparison(car) {
+  if (selectedCars.length < 2) {
+    selectedCars.push(car);
+    alert(`${car.title} has been added for comparison.`);
+  } else {
+    alert("You can only compare two cars at a time.");
+  }
+
+  if (selectedCars.length === 2) {
+    showComparisonModal();
+  }
+}
+
+function showComparisonModal() {
+  const modal = document.getElementById("compare-modal");
+  const comparisonContainer = document.getElementById("comparison-container");
+
+  // Clear previous comparison data
+  comparisonContainer.innerHTML = "";
+
+  // Add comparison details
+  const car1 = selectedCars[0];
+  const car2 = selectedCars[1];
+
+  const comparisonTable = `
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>${car1.title}</th>
+          <th>${car2.title}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Engine</td>
+          <td>${car1.engine}</td>
+          <td>${car2.engine}</td>
+        </tr>
+        <tr>
+          <td>Transmission</td>
+          <td>${car1.transmission}</td>
+          <td>${car2.transmission}</td>
+        </tr>
+        <tr>
+          <td>Drive</td>
+          <td>${car1.drive}</td>
+          <td>${car2.drive}</td>
+        </tr>
+        <tr>
+          <td>Power</td>
+          <td>${car1.power}</td>
+          <td>${car2.power}</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>${car1.price}</td>
+          <td>${car2.price}</td>
+        </tr>
+      </tbody>
+    </table>
+  `;
+
+  comparisonContainer.innerHTML = comparisonTable;
+
+  // Show the modal
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modal = document.getElementById("compare-modal");
+  modal.style.display = "none";
+  selectedCars = []; // Reset selected cars
+}
+
+// Add a "Compare" button to each card
+function editCardContent(card, newTitle, newImageURL, newPrice) {
+  card.style.display = "block";
+
+  const cardHeader = card.querySelector("h2");
+  cardHeader.textContent = newTitle;
+
+  const cardImage = card.querySelector("img");
+  cardImage.src = newImageURL;
+  cardImage.alt = newTitle + " Poster";
+
+  // Create a price element
+  const priceElement = document.createElement("p");
+  priceElement.textContent = `Price: ${newPrice}`;
+  priceElement.style.fontWeight = "bold"; // Optional: Make the price bold
+
+
+  const compareButton = document.createElement("button");
+  compareButton.textContent = "Compare";
+  compareButton.onclick = () => {
+    const car = cars.find((c) => c.title === newTitle);
+    selectCarForComparison(car);
+  };
+
+  const cardDescriptions = card.querySelector(".descriptions");
+  cardDescriptions.innerHTML = ""; // Clear existing descriptions
+  cardDescriptions.appendChild(priceElement);
+  cardDescriptions.appendChild(compareButton);
 }
