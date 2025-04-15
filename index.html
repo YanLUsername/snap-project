@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yan's Car Catalog | Home</title>
+    <meta name="description" content="A Catalog of my Favorite Cars from Brands" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="header-content">
+        <div class="logo">
+          <img src="images\ChatGPT Image Apr 14, 2025, 11_26_25 PM.png" alt="Logo" />
+        </div>
+        <h1 class="title">Yan's Auto Catalog</h1>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="sidebar">
+        <h3>Sort & Filter</h3>
+        <button onclick="resetCards()">Reset</button>
+        <div class="brand-filter">
+          <h4>Filter by Brand</h4>
+          <button onclick="filterByBrand('Toyota')">Toyota</button>
+          <button onclick="filterByBrand('Subaru')">Subaru</button>
+          <button onclick="filterByBrand('Mazda')">Mazda</button>
+          <button onclick="filterByBrand('Ford')">Ford</button>
+          <button onclick="filterByBrand('Honda')">Honda</button>
+          <button onclick="filterByBrand('Chevrolet')">Chevrolet</button>
+          <button onclick="filterByBrand('Nissan')">Nissan</button>
+          <button onclick="filterByBrand('BMW')">BMW</button>
+          <button onclick="filterByBrand('Audi')">Audi</button>
+          <button onclick="filterByBrand('Mercedes-Benz')">Mercedes-Benz</button>
+        </div>
+        <div class="search-bar">
+          <h4>Search by Title</h4>
+          <input type="text" id="search-input" placeholder="Enter car title" />
+          <button onclick="searchByTitle()">Search</button>
+        </div>
+      </div>
+
+    <div id="card-container"></div>
+    <div class="card" style="display: none">
+      <div class="card-content">
+        <h2>Car Make and Model</h2>
+        <img src="" alt="Cool Sports Car" />
+        <ul class="descriptions">
+          <!-- Descriptions will dynamically populate here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+      <div class="footer">
+        <button onclick="quoteAlert();">Get A Quote!</button>
+        <!-- New button that attributes images -->
+        <div class="attribution">
+          <button onclick="toggleAttributions()">View Image Credits</button>
+          <ul id="attribution-list" style="display: none;">
+            <li>
+              GR86 By <a href="//commons.wikimedia.org/wiki/User:Elise240SX" title="User:Elise240SX">Elise240SX</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=123802377">Link</a>
+            </li>
+            <li>
+              Corolla By <a href="//commons.wikimedia.org/wiki/User:Elise240SX" title="User:Elise240SX">Elise240SX</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=149887001">Link</a>
+            </li>
+            <li>
+              Supra By <a href="//commons.wikimedia.org/wiki/User:Alexander-93" title="User:Alexander-93">Alexander Migl</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=77445561">Link</a>
+            </li>
+            <li>
+              WRX By <a href="//commons.wikimedia.org/wiki/User:Elise240SX" title="User:Elise240SX">Elise240SX</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=118708454">Link</a>
+            </li>
+            <li>
+              BRZ By <a href="//commons.wikimedia.org/wiki/User:Alexander-93" title="User:Alexander-93">Alexander-93</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=140040838">Link</a>
+            </li>
+            <li>
+              MX-5 Miata By <a href="//commons.wikimedia.org/wiki/User:%E6%A0%B9%E5%B7%9D%E5%A4%A7%E6%A9%8B" title="User:根川大橋">根川大橋</a> (Negawa Ohashi) - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=93077768">Link</a>
+            </li>
+            <li>
+              Mustang By <a href="//commons.wikimedia.org/wiki/User:Alexander-93" title="User:Alexander-93">Alexander-93</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=149187284">Link</a>
+            </li>
+            <li>
+              Civic Type R By <a href="//commons.wikimedia.org/wiki/User:MercurySable99" title="User:MercurySable99">MercurySable99</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=149431050">Link</a>
+            </li>
+            <li>
+              Z By <a href="//commons.wikimedia.org/wiki/User:Kazyakuruma" title="User:Kazyakuruma">Kazyakuruma</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=115194690">Link</a>
+            </li>
+            <li>
+              GT-R By <a href="//commons.wikimedia.org/wiki/User:Elise240SX" title="User:Elise240SX">Elise240SX</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=124065926">Link</a>
+            </li>
+            <li>
+              Corvette By <a href="//commons.wikimedia.org/wiki/User:Alexander-93" title="User:Alexander-93">Alexander Migl</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=109772545">Link</a>
+            </li>
+            <li>
+              Camaro By <a href="//commons.wikimedia.org/wiki/User:Kevauto" title="User:Kevauto">Kevauto</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=77402460">Link</a>
+            </li>
+            <li>
+              M3 By <a href="//commons.wikimedia.org/wiki/User:Vauxford" title="User:Vauxford">Vauxford</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=104736377">Link</a>
+            </li>
+            <li>
+              M4 By <a href="//commons.wikimedia.org/wiki/User:Vauxford" title="User:Vauxford">Vauxford</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=103839497">Link</a>
+            </li>
+            <li>
+              R8 By <a href="//commons.wikimedia.org/wiki/User:Vauxford" title="User:Vauxford">Vauxford</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=85850975">Link</a>
+            </li>
+            <li>
+              C63 By <a href="//commons.wikimedia.org/wiki/User:Alexander-93" title="User:Alexander-93">Alexander-93</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=134956611">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer> 
+  </body>
+</html>
