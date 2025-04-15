@@ -42,16 +42,26 @@
       </div>
 
     <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>Car Make and Model</h2>
-        <img src="" alt="Cool Sports Car" />
-        <ul class="descriptions">
-          <!-- Descriptions will dynamically populate here -->
-        </ul>
+      <div class="card" style="display: none">
+          <div class="card-content">
+          <h2>Car Make and Model</h2>
+          <img src="" alt="Cool Sports Car" />
+          <ul class="descriptions">
+            <!-- Descriptions will dynamically populate here -->
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+
+    <div id="compare-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Car Comparison</h2>
+        <div id="comparison-container">
+          <!-- Comparison details will be dynamically added here -->
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="footer">
