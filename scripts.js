@@ -279,6 +279,27 @@ function resetCards() {
   location.reload();
 }
 
+function sortByPrice(order) {
+  // Sort the cars array based on the selected order
+  cars.sort((a, b) => {
+    const priceA = parseFloat(a.price.replace(/[^0-9.-]+/g, "")); // Remove "$" and commas
+    const priceB = parseFloat(b.price.replace(/[^0-9.-]+/g, ""));
+    return order === "low-to-high" ? priceA - priceB : priceB - priceA;
+  });
+
+  // Re-render the cards
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = ""; // Clear existing cards
+  const templateCard = document.querySelector(".card");
+
+  for (let i = 0; i < cars.length; i++) {
+    let { title, imageURL, price } = cars[i];
+    const nextCard = templateCard.cloneNode(true);
+    editCardContent(nextCard, title, imageURL, price);
+    cardContainer.appendChild(nextCard);
+  }
+}
+
 /* Functions for modal comparison */
 let selectedCars = []; // Array for selected cars for comparison
 function selectCarForComparison(car) {
