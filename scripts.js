@@ -213,7 +213,7 @@ function editCardContent(card, newTitle, newImageURL) {
   cardImage.alt = newTitle + " Poster";
 
   const cardDescriptions = card.querySelector(".descriptions");
-  cardDescriptions.innerHTML = ""; // Clear existing descriptions
+  cardDescriptions.innerHTML = "";
   
   // You can use console.log to help you debug!
   // View the output by right clicking on your website,
@@ -231,7 +231,7 @@ function quoteAlert() {
   );
 }
 
-// Search function
+//* Search cars by title */
 function searchByTitle() {
   const searchInput = document.getElementById("search-input").value.toLowerCase(); // Get the search input and convert to lowercase
   const filteredCars = cars.filter((car) =>
@@ -245,9 +245,9 @@ function searchByTitle() {
 
   // Loop through the filtered cars and create a card for each
   for (let i = 0; i < filteredCars.length; i++) {
-    let { title, imageURL, descriptions } = filteredCars[i];
+    let { title, imageURL, price } = filteredCars[i];
     const nextCard = templateCard.cloneNode(true);
-    editCardContent(nextCard, title, imageURL, descriptions);
+    editCardContent(nextCard, title, imageURL, price);
     cardContainer.appendChild(nextCard);
   }
 
@@ -256,19 +256,19 @@ function searchByTitle() {
   }
 }
 
-// Sorting Functions
+/* Sort cars by brand */
 function filterByBrand(brand) {
   const filteredCars = cars.filter((car) => car.brand === brand);
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = ""; // Clear existing cards
+  cardContainer.innerHTML = "";
 
   const templateCard = document.querySelector(".card");
 
-  // Loop through the filtered cars and create a card for each
+  // Create new filtered list
   for (let i = 0; i < filteredCars.length; i++) {
-    let { title, imageURL, descriptions } = filteredCars[i];
+    let { title, imageURL, price } = filteredCars[i];
     const nextCard = templateCard.cloneNode(true);
-    editCardContent(nextCard, title, imageURL, descriptions);
+    editCardContent(nextCard, title, imageURL, price);
     cardContainer.appendChild(nextCard);
   }
 }
@@ -279,18 +279,8 @@ function resetCards() {
   location.reload();
 }
 
-// Adds a new button that shows the image attributions
-function toggleAttributions() {
-  const attributionList = document.getElementById("attribution-list");
-  if (attributionList.style.display === "none") {
-    attributionList.style.display = "block";
-  } else {
-    attributionList.style.display = "none";
-  }
-}
-
-let selectedCars = []; // Array to store selected cars for comparison
-
+/* Functions for modal comparison */
+let selectedCars = []; // Array for selected cars for comparison
 function selectCarForComparison(car) {
   if (selectedCars.length < 2) {
     selectedCars.push(car);
@@ -355,7 +345,6 @@ function showComparisonModal() {
   `;
 
   comparisonContainer.innerHTML = comparisonTable;
-
   // Show the modal
   modal.style.display = "block";
 }
@@ -363,10 +352,10 @@ function showComparisonModal() {
 function closeModal() {
   const modal = document.getElementById("compare-modal");
   modal.style.display = "none";
-  selectedCars = []; // Reset selected cars
+  selectedCars = []; // Clear selected cars
 }
 
-// Add a "Compare" button to each card
+/* Creates the cards*/
 function editCardContent(card, newTitle, newImageURL, newPrice) {
   card.style.display = "block";
 
@@ -377,12 +366,12 @@ function editCardContent(card, newTitle, newImageURL, newPrice) {
   cardImage.src = newImageURL;
   cardImage.alt = newTitle + " Poster";
 
-  // Create a price element
+  // Show car price
   const priceElement = document.createElement("p");
   priceElement.textContent = `Price: ${newPrice}`;
-  priceElement.style.fontWeight = "bold"; // Optional: Make the price bold
+  priceElement.style.fontWeight = "bold";
 
-
+  // Add a "Compare" button to each card
   const compareButton = document.createElement("button");
   compareButton.textContent = "Compare";
   compareButton.onclick = () => {
@@ -394,4 +383,15 @@ function editCardContent(card, newTitle, newImageURL, newPrice) {
   cardDescriptions.innerHTML = ""; // Clear existing descriptions
   cardDescriptions.appendChild(priceElement);
   cardDescriptions.appendChild(compareButton);
+}
+
+/* Function to show image attributions */
+// Adds a new button that shows the image attributions
+function toggleAttributions() {
+  const attributionList = document.getElementById("attribution-list");
+  if (attributionList.style.display === "none") {
+    attributionList.style.display = "block";
+  } else {
+    attributionList.style.display = "none";
+  }
 }
