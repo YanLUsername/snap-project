@@ -193,7 +193,7 @@ function showCards() {
   const templateCard = document.querySelector(".card");
 
   // Loop through the cars array and create a card for each car
-  // Uses the template card to create new cards
+  // Shows the name of the car, image of the car, and price of the car
   for (let i = 0; i < cars.length; i++) {
     let { title, imageURL, price } = cars[i];
     const nextCard = templateCard.cloneNode(true);
@@ -233,13 +233,12 @@ function quoteAlert() {
 
 //* Search cars by title */
 function searchByTitle() {
-  const searchInput = document.getElementById("search-input").value.toLowerCase(); // Get the search input and convert to lowercase
-  const filteredCars = cars.filter((car) =>
-    car.title.toLowerCase().includes(searchInput) // Check if the title includes the search input
+  const searchInput = document.getElementById("search-input").value.toLowerCase(); // Convert search input to lowercase
+  const filteredCars = cars.filter((car) => car.title.toLowerCase().includes(searchInput) // Check if match
   );
 
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = ""; // Clear existing cards
+  cardContainer.innerHTML = "";
 
   const templateCard = document.querySelector(".card");
 
@@ -251,8 +250,9 @@ function searchByTitle() {
     cardContainer.appendChild(nextCard);
   }
 
+  // No cars found
   if (filteredCars.length === 0) {
-    cardContainer.innerHTML = "<p>No cars found.</p>"; // Display a message if no cars match the search
+    cardContainer.innerHTML = "<p>No cars found.</p>";
   }
 }
 
@@ -306,8 +306,6 @@ function selectCarForComparison(car) {
   if (selectedCars.length < 2) {
     selectedCars.push(car);
     alert(`${car.title} has been added for comparison.`);
-  } else {
-    alert("You can only compare two cars at a time.");
   }
 
   if (selectedCars.length === 2) {
@@ -319,9 +317,8 @@ function showComparisonModal() {
   const modal = document.getElementById("compare-modal");
   const comparisonContainer = document.getElementById("comparison-container");
 
-  // Clear previous comparison data
+  // Clear previous comparison 
   comparisonContainer.innerHTML = "";
-
   // Add comparison details
   const car1 = selectedCars[0];
   const car2 = selectedCars[1];
@@ -366,8 +363,7 @@ function showComparisonModal() {
   `;
 
   comparisonContainer.innerHTML = comparisonTable;
-  // Show the modal
-  modal.style.display = "block";
+  modal.style.display = "block"; // Show the modal
 }
 
 function closeModal() {
@@ -380,9 +376,11 @@ function closeModal() {
 function editCardContent(card, newTitle, newImageURL, newPrice) {
   card.style.display = "block";
 
+  // Show car name
   const cardHeader = card.querySelector("h2");
   cardHeader.textContent = newTitle;
 
+  // Show car image
   const cardImage = card.querySelector("img");
   cardImage.src = newImageURL;
   cardImage.alt = newTitle + " Poster";
