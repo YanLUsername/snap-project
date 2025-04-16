@@ -280,7 +280,7 @@ function resetCards() {
 }
 
 function sortByPrice(order) {
-  // Sort the cars array based on the selected order
+  // Sort the cars array by price
   cars.sort((a, b) => {
     const priceA = parseFloat(a.price.replace(/[^0-9.-]+/g, "")); // Remove "$" and commas
     const priceB = parseFloat(b.price.replace(/[^0-9.-]+/g, ""));
